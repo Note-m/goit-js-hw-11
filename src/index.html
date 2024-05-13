@@ -10,11 +10,16 @@
   </head>
   <body>
     <form class="form-search">
-      <input class="inp-search" type="text" placeholder="Search images..." />
+      <input
+        class="inp-search"
+        name="searchWords"
+        type="text"
+        placeholder="Search images..."
+      />
       <button class="btn-search" type="submit">Search</button>
     </form>
     <div class="loading">
-      <span class="loader"></span>
+      <span class="loader display-none"></span>
     </div>
     <ul class="gallery"></ul>
     <script type="module" defer src="./main.js"></script>

@@ -65,7 +65,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 .loader {
   width: 48px;
@@ -112,4 +111,44 @@
   100% {
     transform: rotate(-360deg);
   }
+}
+.display-none {
+  display: none;
+}
+.gallery {
+  display: flex;
+  gap: 24px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.photo-container {
+  width: calc((100% - 48px) \2);
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+}
+
+.info {
+  display: flex;
+  gap: 28px;
+  justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  background: #fff;
+}
+.info {
+}
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
