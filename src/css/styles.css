@@ -125,9 +125,7 @@
 }
 .photo-container {
   width: calc((100% - 48px) \2);
-  border-bottom: 1px solid #808080;
-  border-left: 1px solid #808080;
-  border-right: 1px solid #808080;
+  border: 1px solid #2e2f42;
 }
 
 .info {

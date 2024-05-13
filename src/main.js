@@ -10,12 +10,17 @@ const formSearch = document.querySelector('.form-search');
 const imgGallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 
+const buider = new simpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionsDelay: 250,
+});
+
 function search(event) {
   //Скасовую дефолтні дії
   event.preventDefault();
   // read searchWords
   const searchQuery = event.target.elements.searchWords.value.trim();
-  // clean gallery
+
   //cheak searchQuery and use izitost for message about error
   if (searchQuery === '') {
     return iziToast.error({
@@ -25,6 +30,7 @@ function search(event) {
   }
   //clean gallery
   imgGallery.innerHTML = '';
+
   loader.classList.remove('display-none');
   //use fechphotos for rendering page
   fetchPhotos(searchQuery)
@@ -36,10 +42,7 @@ function search(event) {
         });
       }
       imgGallery.innerHTML = render(data.hits);
-      const buider = new simpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionsDelay: 250,
-      });
+      builder.refresh();
     })
     .catch(error => console.log(error))
     .finally(() => {
