@@ -40,8 +40,8 @@ function search(event) {
         captionsData: 'alt',
         captionsDelay: 250,
       });
-      builder.refresh();
     })
+    .catch(error => console.log(error))
     .finally(() => {
       loader.classList.add('display-none');
     });
