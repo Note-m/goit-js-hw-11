@@ -25,7 +25,7 @@ function search(event) {
   }
   //clean gallery
   imgGallery.innerHTML = '';
-
+  loader.classList.remove('display-none');
   //use fechphotos for rendering page
   fetchPhotos(searchQuery)
     .then(data => {
@@ -44,6 +44,7 @@ function search(event) {
     .catch(error => console.log(error))
     .finally(() => {
       loader.classList.add('display-none');
+      formSearch.reset;
     });
 }
 
