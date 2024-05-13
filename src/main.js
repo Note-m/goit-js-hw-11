@@ -10,11 +10,6 @@ const formSearch = document.querySelector('.form-search');
 const imgGallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 
-const buider = new simpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionsDelay: 250,
-});
-
 function search(event) {
   //Скасовую дефолтні дії
   event.preventDefault();
@@ -42,6 +37,10 @@ function search(event) {
         });
       }
       imgGallery.innerHTML = render(data.hits);
+      const buider = new simpleLightbox('.gallery a', {
+        captionsData: 'alt',
+        captionsDelay: 250,
+      });
       builder.refresh();
     })
     .catch(error => console.log(error))

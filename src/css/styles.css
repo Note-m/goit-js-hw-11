@@ -125,7 +125,6 @@
 }
 .photo-container {
   width: calc((100% - 48px) \2);
-  border: 1px solid #2e2f42;
 }
 
 .info {
@@ -134,19 +133,22 @@
   justify-content: space-around;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 2;
   letter-spacing: 0.04em;
   color: #2e2f42;
 
   background: #fff;
 }
-.info {
+ul li > .info {
+  border-bottom: 2px dotted #2e2f42;
+  border-right: 2px dotted #2e2f42;
+  border-left: 2px dotted #2e2f42;
 }
 .title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.33333;
   letter-spacing: 0.04em;
   color: #2e2f42;
