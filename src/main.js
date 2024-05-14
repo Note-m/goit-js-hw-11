@@ -37,7 +37,7 @@ function search(event) {
         });
       }
       imgGallery.innerHTML = render(data.hits);
-      const buider = new simpleLightbox('.gallery a', {
+      const builder = new simpleLightbox('.gallery a', {
         captionsData: 'alt',
         captionsDelay: 250,
       });
@@ -46,7 +46,7 @@ function search(event) {
     .catch(error => console.log(error))
     .finally(() => {
       loader.classList.add('display-none');
-      formSearch.reset;
+      formSearch.reset();
     });
 }
 
